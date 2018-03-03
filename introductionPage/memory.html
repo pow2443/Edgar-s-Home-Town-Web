@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>Edgar's Memory in Busan</title>
+<meta charset="iso-8859-1">
+<link rel="stylesheet" href="../css/mystyleMemory.css" type="text/css">
+</head>
+<body>
+<div class="wrapper row1">
+  <header id="header" class="clear">
+    <div id="hgroup">
+      <h1><a href="#">Busan in South Korea</a></h1>
+      <h2>Edgar's Hometown</h2>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="../home.htm" >Home</a></li>
+        <li><a href="aboutBusan.html" >About Busan</a></li>
+        <li><a href="../goodplacePage/tourist.html">Tourist Attractions</a></li>
+        <li><a href="../goodplacePage/restaurant.html">Good Restaurant</a></li>
+        <li class="last"><a href="memory.html" class="current">Memory in Busan</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
+<!-- content -->
+<div class="wrapper row2">
+  <div id="container" class="clear">
+    <!-- content body -->
+    <div id="homepage">
+      <!-- One Quarter -->
+      <section id="latest" class="clear">
+        <article class="one_quarter">
+          <figure><img src="../images/hwChungsapo.jpg" width="215" height="315" alt="chungsapo">
+            <figcaption>at Chungsapo in Winter 2013</figcaption>
+          </figure>
+        </article>
+        <article class="one_quarter">
+          <figure><img src="../images/hwBeach.jpg" width="215" height="315" alt="Haeundae">
+            <figcaption>at Haeundae Beach in Summer 2011</figcaption>
+          </figure>
+        </article>
+        <article class="one_quarter">
+          <figure><img src="../images/hwNight.jpg" width="215" height="315" alt="Night View">
+            <figcaption>Night View at Jaesong-Dong</figcaption>
+          </figure>
+        </article>
+        <article class="one_quarter lastbox">
+          <figure><img src="../images/hwGwangan.jpg" width="215" height="315" alt="Gwangan Daegyu">
+            <figcaption>night of Gwangan Daegyu in Summer 2015</figcaption>
+          </figure>
+        </article>
+      </section>
+      <!-- / One Quarter -->
+      <section id="shout">
+        <p>I was born in Busan ,South Korea in 1991. I'had mostly grew up in Busan and never moved to other cities before living in Seattle. I have a lot of memories in Busan with my best friends and family. These pictures are parts of my precious memories at Busan.</p>
+      </section>
+    </div>
+    <!-- main content -->
+    <div id="content">
+      <section id="services" class="last clear">
+        <ul>
+          <li>
+            <article class="clear">
+              <figure><img src="../images/hwSunset.jpg" alt="Sunset">
+                <figcaption>
+                  <h2>Haeundae Beach Sunset</h2>
+                  <p>Busan has a beautiful sunset. I often enjoyed the sunset with coffee</p>
+                  
+                </figcaption>
+              </figure>
+            </article>
+          </li>
+          <li class="last">
+            <article class="clear">
+              <figure><img src="../images/hwPiff.jpg" alt="PIFF">
+                <figcaption>
+                  <h2>Busan International Film Festival with best friends</h2>
+                  <p>The Busan International Film Festival (BIFF, previously Pusan International Film Festival, PIFF), held annually in Haeundae-gu, Busan (also Pusan), South Korea, is one of the most significant film festivals in Asia. The first festival, held from 13 to 21 September 1996, was also the first international film festival in Korea. There are lots cultural event in Busan</p>
+                  
+                </figcaption>
+              </figure>
+            </article>
+          </li>
+          <li class="last">
+            <article class="clear">
+              <figure><img class="gif" src="../fireworks.png">
+                <figcaption>
+                  <h2>Busan Fireworks Festival<br>(When you place your mouse cusor on the image, it will play .gif file.)</h2>
+                  <p>Busan Fireworks Festival takes place every October along Gwangalli Beach. The festival¡¯s diverse programs of cultural events, high-tech laser light shows, and myriad of unique and colorful fireworks make this one of the area¡¯s most popular festivals, drawing crowds of over 1 million visitors each year. Although most people flock to the beach for a closer view of the festivities, nearby Hwangnyeongsan Mountain also offers a great view of the fireworks.</p>
+                  
+                </figcaption>
+              </figure>
+            </article>
+          </li>
+        </ul>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+          </script>
+        <script>
+          $(document).ready(function()
+{
+    $(".gif").hover(
+        function()
+        {
+          var src = $(this).attr("src");
+          $(this).attr("src", src.replace(/\.png$/i, ".gif"));
+        },
+        function()
+        {
+          var src = $(this).attr("src");
+          $(this).attr("src", src.replace(/\.gif$/i, ".png"));
+        });
+});
+          </script>
+        <p><b>Edgar's Hometown Map</b></p>
+        <div id="map-canvas"></div>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false" type="text/javascript">
+        </script>
+        <script type = "text/javascript">
+          if (document.getElementById('map-canvas')){
+ 
+    // Coordinates to center the map
+    var myLatlng = new google.maps.LatLng(35.1568078,129.0462819);
+ 
+    // Other options for the map, pretty much selfexplanatory
+    var mapOptions = {
+        zoom: 14,
+        center: myLatlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+ 
+    // Attach a map to the DOM Element, with the defined settings
+    var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+}
+        </script>
+      </section>
+    </div>
+    
+    <!-- / content body -->
+  </div>
+</div>
+<!-- Footer -->
+<div class="wrapper row3">
+  <footer id="footer" class="clear">
+    <p class="fl_left">Copyright &copy; 2018 - Edgar Hyeogwoo Park </p>
+  </footer>
+</div>
+</body>
+</html>

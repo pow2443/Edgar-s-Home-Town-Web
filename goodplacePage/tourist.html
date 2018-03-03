@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>Tourist Attractions</title>
+<meta charset="iso-8859-1">
+<link rel="stylesheet" href="../css/mystyleTourist.css" type="text/css">
+
+</head>
+<body>
+  <div id="content">
+<div class="wrapper row1">
+  <header id="header" class="clear">
+    <div id="hgroup">
+      <h1><a href="#">Busan in South Korea</a></h1>
+      <h2>Edgar's Hometown</h2>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="../home.htm" >Home</a></li>
+        <li><a href="../introductionPage/aboutBusan.html" >About Busan</a></li>
+        <li><a href="tourist.html" class="current">Tourist Attractions</a></li>
+        <li><a href="restaurant.html">Good Restaurant</a></li>
+        <li class="last"><a href="../introductionPage/memory.html">Memory in Busan</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
+<!-- content -->
+<div class="wrapper row2">
+  <div id="container" class="clear">
+    <!-- content body -->
+    <section id="shout">
+      <div class="roles">
+        <div>
+      <h1>Busan's Tourist Attractions<h1>
+          </div>
+        <div>
+          <h1>Busan's Good Attractions<h1>
+          </div>
+            <div>
+          <h1>Fatastic Experiences in Busan<h1>
+          </div>
+             <div>
+          <h1>Dynamic Busan<h1>
+          </div>    
+        </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+        </script>
+      <script>
+        var current = 1; //keeps track of the current div
+var height = $('.roles').height(); //the height of the roles div
+var numberDivs = $('.roles').children().length; //the number of children of the roles div
+var first = $('.roles div:nth-child(1)'); //the first div nested in roles div
+setInterval(function() {
+    var number = current * -height;
+    first.css('margin-top', number + 'px');
+    if (current === numberDivs) {
+        first.css('margin-top', '0px');
+        current = 1;
+    } else current++;
+}, 2000);
+        </script>
+      <p>Busan not only features a variety of antique and souvenir shops, but also unique restaurants, attractions and accommodations.</p>
+    </section>
+            
+    <!-- main content -->
+    <section id="services" class="clear">
+      <!-- article 1 -->
+      <article class="one_third">
+        <h2>Haeundae Beach</h2>
+        <img src="../images/haeundae.jpg" alt="Beach">
+        <p>The beach is popular with Korean tourists, although it has recently seen an afflux or foreign tourists, from China, Japan and Western countries. The beach and surrounding area is particularly crowded during the summer months of July and August. Amongst the sights of Haeundae are Dongbaekseom, at the West end of the beach, which is a popular fishing area. Oryukdo, a group of small islets East of the beach, are also considered a symbol of Busan. The neighborhood surrounding Haeundae is home to most of Busan's expatriate population.</p>
+        <footer class="more"><a href="https://en.wikipedia.org/wiki/Haeundae_Beach">More Info &raquo;</a></footer>
+      </article>
+      <!-- article 2 -->
+      <article class="one_third">
+        <h2>Gwangandaegyo</h2>
+        <img src="../images/bridge.JPG" alt="Gwangandaegyo">
+        <p>The Gwangandaegyo or Diamond Bridge is a suspension bridge located in Busan, South Korea. It connects Haeundae-gu to Suyeong-gu. The road surface is about 6,500 meters long, with the bridge as a whole spanning 7,420 meters. It is the second longest bridge in the country after the Incheon Bridge.
+Construction began in 1994 and concluded in December 2002, with a total cost of 789.9 billion won.[1] The bridge opened temporarily in September and October 2002 for the 2002 Asian Games. However, it was not officially opened until January, 2003.</p>
+        <footer class="more"><a href="http://english.visitkorea.or.kr/enu/ATR/SI_EN_3_1_1_1.jsp?cid=1064834">More Info&raquo;</a></footer>
+      </article>
+      <!-- article 3 -->
+      <article class="one_third lastbox">
+        <h2>Haedong Yonggungsa</h2>
+        <img src="../images/temple.jpg" alt="temple">
+        <p>Haedong Yonggung Temple is a Buddhist temple in Gijang-gun, Busan, South Korea. The temple was built in 1376 by the teacher known as Naong during the Goryeo Dynasty, and was originally known as Bomun Temple . It was destroyed during the Japanese invasions of Korea (1592?98) but was rebuilt in the 1930s, and was renamed Haedong Yonggung Temple in 1974. The temple complex is a large one and one of few in Korea to be set on the seaside. As such, combined with its proximity to Haeundae Beach and the east side of Busan, the temple is popular with sightseers, particularly during Buddha's Birthday celebrations when the complex is decorated with paper lanterns.</p>
+        <footer class="more"><a href="http://www.walkwithcham.com/2016/01/haedong-yonggungsa-temple.html">More Info &raquo;</a></footer>
+      </article>
+    </section>
+
+    <section class="last clear">
+      <article class="one_third">
+        <h2>jagalchi fish market</h2>
+        <img src="../images/jagalchi.jpg" alt="market">
+        <p>Jagalchi Fish Market is a fish market in the neighborhood of Nampo-dong in Jung-gu, and Chungmu-dong, Seo-gu, Busan, South Korea. The market is located on the edge of Nampo Port , Busan. The name is said to have originated from jagal (gravel in Korean) because the market used to be surrounded by gravel. This is one of the ten landmarks of Busan, so many tourists visit there to shop.
+</p>
+        <footer class="more"><a href="http://english.visitkorea.or.kr/enu/ATR/SI_EN_3_1_1_1.jsp?cid=2382544">More Info &raquo;</a></footer>
+      </article>
+      <article class="one_third">
+        <h2>Busan International Film Festival</h2>
+        <img src="../images/piff.jpg" alt="PIFF">
+        <p>It's all glitter, glamour and gossip in October when the Busan International Film Festival (BIFF) takes centre stage. Not just about movies ? 319 films from 79 countries in 2014 ? the real buzz centres on which Korean female starlet will wear the most revealing dress on the red carpet.Screenings are at six theatres, including Busan Cinema Center, a magnificent complex with the world's longest cantilever structure. The 127,000 LED lights streaming across its concave surface create an urban architectural spectacle at night.</p>
+        <footer class="more"><a href="http://www.biff.kr/structure/eng/default.asp">More Info&raquo;</a></footer>
+      </article>
+      
+      <article class="one_third lastbox">
+        <h2>Do you need more tourist attractions?</h2>
+        <p>Busan's Official Webistie serve various info for forigners</p>
+        <footer class="more"><a href="http://english.busan.go.kr/index">Go to Busan's Official Webistie &raquo;</a></footer>
+        <!-- copy function -->
+        <label for="website">Busan's English News for tourists:</label>
+<input type="text" id="website" value="http://www.busan.go.kr/dynamic/index" />
+<button data-copytarget="#website">copy</button>
+
+<label for="youtube">Busan's Youtube Page for tourists:</label>
+<input type="text" id="youtube" value="https://www.youtube.com/user/DynamicBusan/videos" />
+<button data-copytarget="#youtube">copy</button>
+        <!-- calling copy fuction -->
+        <script>
+        (function() {
+
+	'use strict';
+  
+  // click events
+  document.body.addEventListener('click', copy, true);
+
+	// event handler
+	function copy(e) {
+
+    // find target element
+    var 
+      t = e.target,
+      c = t.dataset.copytarget,
+      inp = (c ? document.querySelector(c) : null);
+      
+    // is element selectable?
+    if (inp && inp.select) {
+      
+      // select text
+      inp.select();
+
+      try {
+        // copy text
+        document.execCommand('copy');
+        inp.blur();
+        
+        // copied animation
+        t.classList.add('copied');
+        setTimeout(function() { t.classList.remove('copied'); }, 1500);
+      }
+      catch (err) {
+        alert('please press Ctrl/Cmd+C to copy');
+      }
+      
+    }
+    
+	}
+
+})();
+        </script>
+        <br>
+        <p>Do you want to save this page info into your PC?</p>
+        
+        <div id="editor"></div>
+<button id="cmd">Save this page info</button>
+        
+        
+      </article>
+    </section>
+    <!-- / content body -->
+  </div>
+</div>
+  <header class="header">
+			<h1>Currency Converter</h1>
+			<h2>In this section, all currencies info come from open source Fixer.io<br>
+			  All currency info is updated at 3pm in BST
+			</h2>
+		</header>
+
+
+		<form class="conversionForm">
+
+			<section class="conversionForm__amount">
+				<label>Amount:</label>
+				<input type="number" class="currencyValue">
+			</section>
+
+			<section class="conversionForm__currencies">
+
+				<div class="conversionForm__from">
+					<label>From:</label>
+					<select class="convertFrom">
+					</select>
+				</div>
+
+				<div class="conversionForm__to">
+					<label>To:</label>
+					<select class="convertTo">
+					</select>
+				</div>
+			</section>
+
+
+			<input type="submit" value="convert" class="currencySubmit">
+		</form>
+
+		<p class="output"></p>
+
+  <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+  <script type = "text/javascript">
+    $(function(){
+
+	// open source Fixer.io calls to get currency info
+	$.get('https://api.fixer.io/latest?base=ZAR', function(data){
+
+		var countryObject = data.rates;
+
+		// Loop through object, get keys and values
+		for(var key in countryObject){
+			if(countryObject.hasOwnProperty(key)) {
+				$('select').append('<option val="' + key + '">' + key + '</option>');
+			}
+		}
+
+		// Second API calls to get info upon changing base currency
+		$('.convertFrom').change(function(){
+			var thisValue = $('.convertFrom').val();
+
+			$.get('https://api.fixer.io/latest?base=' + thisValue, function(newData){
+				countryObject = newData.rates;
+			});
+		});
+
+		// converting
+		$('form').on('submit', function(e){
+			e.preventDefault();
+
+			var convertingTo = $('.convertTo').val(),
+				toRate = countryObject[convertingTo],
+				amount = $('.currencyValue').val();
+
+			var calculation = amount * toRate;
+//showing output
+			if(calculation === 0) {
+				$('.output').html('Please enter a valid amount.');
+			} else {
+				$('.output').html(parseFloat(calculation).toFixed(3));
+			}
+		});
+
+	});
+
+});
+  </script>
+<!-- footer -->
+<div class="wrapper row3">
+  <footer id="footer" class="clear">
+    <p class="fl_left">Copyright &copy; 2018 - Edgar Hyeogwoo Park </p>
+  </footer>
+</div>
+    </div>
+  <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script>
+  <script>
+    var doc = new jsPDF();
+var specialElementHandlers = {
+    '#editor': function (element, renderer) {
+        return true;
+    }
+};
+
+$('#cmd').click(function () {   
+    doc.fromHTML($('#content').html(), 15, 15, {
+        'width': 170,
+            'elementHandlers': specialElementHandlers
+    });
+    doc.save('Busan-tourist-attractions.pdf');
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>Good Restaurants</title>
+<meta charset="iso-8859-1">
+<link rel="stylesheet" href="../css/mystyleRestaurant.css" type="text/css">
+</head>
+<body>
+<div class="wrapper row1">
+  <header id="header" class="clear">
+    <div id="hgroup">
+      <h1><a href="#">Busan in South Korea</a></h1>
+      <h2>Edgar's Hometown</h2>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="../home.htm" >Home</a></li>
+        <li><a href="../introductionPage/aboutBusan.html" >About Busan</a></li>
+        <li><a href="tourist.html">Tourist Attractions</a></li>
+        <li><a href="restaurant.html" class="current">Good Restaurant</a></li>
+        <li class="last"><a href="../introductionPage/memory.html">Memory in Busan</a></li></li>
+      </ul>
+    </nav>
+  </header>
+</div>
+  
+<!-- content -->
+<div class="wrapper row2">
+  <div id="container" class="clear">
+   <section id="shout">
+    <h1> Busan's <div id="rotate"> <div>awesome</div> <div>fantastic</div> <div>great</div> <div>dynamic</div> </div> restauratns.</h1>
+  <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script> 
+  <script>
+    (function($){
+    $.fn.extend({ 
+        rotaterator: function(options) {
+ 
+            var defaults = {
+                fadeSpeed: 500,
+                pauseSpeed: 100,
+				child:null
+            };
+             
+            var options = $.extend(defaults, options);
+         
+            return this.each(function() {
+                  var o =options;
+                  var obj = $(this);                
+                  var items = $(obj.children(), obj);
+				  items.each(function() {$(this).hide();})
+				  if(!o.child){var next = $(obj).children(':first');
+				  }else{var next = o.child;
+				  }
+				  $(next).fadeIn(o.fadeSpeed, function() {
+						$(next).delay(o.pauseSpeed).fadeOut(o.fadeSpeed, function() {
+							var next = $(this).next();
+							if (next.length == 0){
+									next = $(obj).children(':first');
+							}
+							$(obj).rotaterator({child : next, fadeSpeed : o.fadeSpeed, pauseSpeed : o.pauseSpeed});
+						})
+					});
+            });
+        }
+    });
+})(jQuery);
+
+ $(document).ready(function() {
+        $('#rotate').rotaterator({fadeSpeed:500, pauseSpeed:100});
+ });
+    </script>
+    </section>
+    <!-- Slider -->
+    <section id="slider" class="clear">
+      <ul id="slides">
+	<li class="slide showing"><h2>Sulbing</h2>
+          <img src="../images/sulbing.jpg" alt="sulbing"></li>
+	<li class="slide"><h2>Ddoongbo Jip</h2>
+          <img src="../images/ddoongbo.jpg" alt="Ddoongbo Jip"></li>
+	<li class="slide"><h2>Gyeongju Gukbap</h2>
+          <img src="../images/gukbap.JPG" alt="Gyeongju Gukbap"></li>
+	<li class="slide"><h2>Noran Mahura</h2><img src="../images/seafood.jpg" width="215" height="100" alt="seafood"></li>
+      <li class="slide"><h2>Yetnal Jjajang</h2><img src="../images/sonjajang.jpg" width="215" height="100" alt="sonjajang"></li>
+      <li class="slide"><h2>Dongnae Halmae Pajeon</h2><img src="../images/pajeon.jpg" width="215" height="100" alt="pajeon"></li>
+      <li class="slide"><h2>Gijang Fresh Eel</h2><img src="../images/gijang.jpg" width="215" height="100" alt="gijang"></li>
+</ul>
+    <script type = "text/javascript">
+  var slides = document.querySelectorAll('#slides .slide');
+var currentSlide = 0;
+var slideInterval = setInterval(nextSlide,2000);
+
+function nextSlide(){
+	slides[currentSlide].className = 'slide';
+	currentSlide = (currentSlide+1)%slides.length;
+	slides[currentSlide].className = 'slide showing';
+}
+</script>
+      
+      <br>
+      <br>
+      <br>
+      <figure><ul id="slides">
+        <img src="../images/soltapPizza.jpg" alt="Sol Tap Pizza">
+        <figcaption>
+          <h2>Sol Tap Pizza House</h2>
+          <p>Touted as Busan's best pizza, Sol Taphouse delivers craft beer plus authentic New York-style pizzas from the kitchen of Slice of Life. The classics, but Spicy Garlic and The Bronx are easily the most popular pizzas. There are at least a dozen local craft beers on tap and views over Gwangalli Beach.</p>
+          <footer class="more"><a href="https://www.google.com/maps/place/SOL+Taphouse+(Slice+of+Life+Pizza)/@35.1486756,129.11241,17z/data=!3m1!4b1!4m5!3m4!1s0x3568ecfaf16901f5:0xae6824bf9cdc67a0!8m2!3d35.1486756!4d129.1145987">Find Location &raquo;</a></footer>
+        </figcaption>
+      </figure>
+    </section>
+    
+    <!-- main content -->
+    <div id="homepage">
+      <!-- services area -->
+      <section id="services" class="clear">
+        <!-- article 1 -->
+        <article class="one_third">
+          <h2>Sulbing</h2>
+          <img src="../images/sulbing.jpg" alt="sulbing">
+          <p>No serious foodie should visit Busan without trying sulbing, a wonderfully subtle dessert invented in this city. It's a bowl of shaved frozen milk topped with soybean powder and sliced almonds. A splash of condensed milk adds a hint of sweetness. New variations experiment with yogurt, fruit and chocolate.</p>
+          <footer class="more"><a href="https://www.google.com/maps/search/busan+sulbing/@35.1505903,129.0599875,12.5z">Find Location &raquo;</a></footer>
+        </article>
+        <!-- article 2 -->
+        <article class="one_third">
+          <h2>Ddoongbo Jip</h2>
+          <img src="../images/ddoongbo.jpg" alt="Ddoongbo Jip">
+          <p>Open since ¡®82, the name of this hole-in-the-wall literally means 'Fatty's House'. They're famous for their jjukumi (webfoot octopus): the spicy, chewy delicacy is grilled over charcoal and often paired with the house bossam (broiled pork). The atmosphere is lively and the portions are generous so be ready to eat and drink to your heart's content. Closed every fourth Sunday. Though there's little English spoken, there are only two or three menu items and big pictures of each, so ordering is easy.</p>
+          <footer class="more"><a href="https://www.google.com/maps/place/Ttungbojib/@35.1008939,129.0339447,17z/data=!3m1!4b1!4m5!3m4!1s0x3568e973a16e8dd9:0x920a1f918b6e5e63!8m2!3d35.1008895!4d129.0361334">Find Location &raquo;</a></footer>
+        </article>
+        <!-- article 3 -->
+        <article class="one_third lastbox">
+          <h2>Gyeongju Gukbap</h2>
+          <img src="../images/gukbap.JPG" alt="Gyeongju Gukbap">
+          <p>It may look like all the other dwaeji gukbap (µÅÁö±¹¹ä; pork and rice soup) restaurants on Seomyeon's Youth St but, judging by the number of celebrity autographs on the wall, this one is special. Hard to find outside the province, this must-try authentic Busan dish is simple, hearty and straightforward, just like the people of this fair city.</p>
+          <footer class="more"><a href="https://www.google.com/maps/place/%EA%B2%BD%EC%A3%BC%EB%B0%95%EA%B0%80%EA%B5%AD%EB%B0%A5/@35.1843368,129.1052553,17z/data=!3m1!4b1!4m5!3m4!1s0x35689318b542b83f:0x15bb7a19c96320ce!8m2!3d35.1843324!4d129.107444">Find Location &raquo;</a></footer>
+        </article>
+      </section>
+      
+      <!-- One Quarter -->
+      <section id="latest" class="last clear">
+        <article class="one_quarter">
+          <figure><img src="../images/seafood.jpg" width="215" height="100" alt="seafood">
+            <figcaption>
+              <h2>Noran Mahura</h2>
+              
+              <footer class="more"><a href="https://www.google.com/maps/place/%EB%85%B8%EB%9E%80%EB%A7%88%ED%9B%84%EB%9D%BC/@35.1601797,129.1872644,17z/data=!4m5!3m4!1s0x35688d1b3f6bf15f:0x1be4ebf007631790!8m2!3d35.1601753!4d129.1894531">Find Location &raquo;</a></footer>
+            </figcaption>
+          </figure>
+        </article>
+        <article class="one_quarter">
+          <figure><img src="../images/sonjajang.jpg" width="215" height="100" alt="sonjajang">
+            <figcaption>
+              <h2>Yetnal Jjajang</h2>
+              
+              <footer class="more"><a href="https://www.google.com/maps/place/%EC%98%9B%EB%82%A0%EC%86%90%EC%A7%9C%EC%9E%A5/@35.1568564,129.0578213,17z/data=!4m5!3m4!1s0x3568eb6e39cea6db:0x9fff751e78979827!8m2!3d35.156724!4d129.0573309">Find Location &raquo;</a></footer>
+            </figcaption>
+          </figure>
+        </article>
+        <article class="one_quarter">
+          <figure><img src="../images/pajeon.jpg" width="215" height="100" alt="pajeon">
+            <figcaption>
+              <h2>Dongnae Halmae Pajeon</h2>
+              
+              <footer class="more"><a href="https://www.google.com/maps/place/%EB%8F%99%EB%9E%98%ED%95%A0%EB%A7%A4%ED%8C%8C%EC%A0%84/@35.2045834,129.0816453,17z/data=!3m1!4b1!4m5!3m4!1s0x35689370e36a0783:0x14a1ce8a9159de45!8m2!3d35.204579!4d129.083834">Find Location &raquo;</a></footer>
+            </figcaption>
+          </figure>
+        </article>
+        <article class="one_quarter lastbox">
+          <figure><img src="../images/gijang.jpg" width="215" height="100" alt="gijang">
+            <figcaption>
+              <h2>Gijang Fresh Eel</h2>
+              
+              <footer class="more"><a href="https://www.google.com/maps/place/Gijanggomjangeo/@35.1852364,129.2088243,17z/data=!3m1!4b1!4m5!3m4!1s0x35688c3bffc92cbb:0x9c0edd582274ae0e!8m2!3d35.185232!4d129.211013">Find Location &raquo;</a></footer>
+            </figcaption>
+          </figure>
+        </article>
+        <br>
+        <br>
+        <article class="one_quarter lastbox">
+          <figure>
+            <figcaption>
+              <h2>Do you need more good restaurants info in Busan?</h2>
+              
+              <footer class="more"><div class="button" onclick = "alert(this)">Click for good restaurants</div></footer>
+            </figcaption>
+          </figure>
+        </article>
+        <script type = "text/javascript">
+          function alert(button) {
+  window.open('https://theculturetrip.com/asia/south-korea/articles/busan-s-10-best-cultural-restaurants-exploring-korea-s-food-scene/', '_blank');
+}
+        </script>
+      </section>
+      <!-- / One Quarter -->
+    </div>
+    <!-- / content body -->
+  </div>
+</div>
+<!-- Footer -->
+<div class="wrapper row3">
+  <footer id="footer" class="clear">
+    <p class="fl_left">Copyright &copy; 2018 - Edgar Hyeogwoo Park </p>
+  </footer>
+</div>
+</body>
+</html>
+
